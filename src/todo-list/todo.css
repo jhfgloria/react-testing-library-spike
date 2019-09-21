@@ -1,0 +1,4 @@
+.todo.done {
+  background-color: #4caf50;
+  text-decoration: line-through;
+}

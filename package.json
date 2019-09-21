@@ -4,6 +4,7 @@
   "description": "React boilerplate with webpack",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "start": "webpack-dev-server --mode development --devtool source-map --hot --open",
     "build": "webpack --mode production"
   },
@@ -16,16 +17,30 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "7.6.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@babel/preset-env": "7.6.0",
     "@babel/preset-react": "7.0.0",
+    "@testing-library/jest-dom": "^4.1.0",
+    "@testing-library/react": "9.1.4",
     "babel-loader": "8.0.6",
+    "css-loader": "3.2.0",
     "html-webpack-plugin": "3.2.0",
+    "jest": "24.9.0",
+    "style-loader": "1.0.0",
     "webpack": "4.40.2",
     "webpack-cli": "3.3.9",
     "webpack-dev-server": "3.8.1"
   },
   "dependencies": {
+    "prop-types": "15.7.2",
     "react": "16.9.0",
-    "react-dom": "16.9.0"
+    "react-dom": "16.9.0",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }

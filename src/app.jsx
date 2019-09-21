@@ -1,11 +1,15 @@
 import React from "react";
+import TodoList from "./todo-list/todo-list.jsx";
+import state from './state';
+import { Provider } from "react-redux";
 
 const App = () => {
   return (
-    <div>
-      <h1>Welcome to React boilerplate</h1>
-      <p>Edit app.jsx file to edit this page</p>
-    </div>
+    <Provider store={state}>
+      <div>
+        <TodoList />
+      </div>
+    </Provider>
   );
 };
 
